@@ -24,7 +24,7 @@ public class Main {
     public Connection establecerConexion() {
         try {
             conectar = DriverManager.getConnection(cadena, usuario, contrasena);
-           // JOptionPane.showMessageDialog(null, "Se conectó correctamente");
+            // JOptionPane.showMessageDialog(null, "Se conectó correctamente");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "No se pudo conectar " + e.toString());
         }
@@ -34,7 +34,9 @@ public class Main {
     public static void main(String[] args) {
         Main app = new Main();
         app.establecerConexion();
-         Formulario.Form form = new Formulario.Form();
-         
+        Formulario.Form form = new Formulario.Form();
+
+        form.setVisible(true);
+
     }
 }
